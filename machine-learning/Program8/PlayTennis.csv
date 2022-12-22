@@ -1,0 +1,15 @@
+Day,Outlook,Temprature,Humidity,Wind,Play_Tennis
+D1,sunny,hot,high,false,no
+D2,sunny,hot,high,true,no
+D3,overcast,hot,high,false,yes
+D4,rainy,mild,high,false,yes
+D5,rainy,cool,normal,false,yes
+D6,rainy,cool,normal,true,no
+D7,overcast,cool,normal,true,yes
+D8,sunny,mild,high,false,no
+D9,sunny,cool,normal,false,yes
+D10,rainy,mild,normal,false,yes
+D11,sunny,mild,normal,true,yes
+D12,overcast,mild,high,true,yes
+D13,overcast,hot,normal,false,yes
+D14,rainy,mild,high,true,no
