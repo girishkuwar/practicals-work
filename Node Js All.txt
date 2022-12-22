@@ -1,0 +1,815 @@
+
+$ 1.
+Create an HTML from that registration details and write a javascript to validate students first and last name as it should not contain other than alphabets and age should be between 18 to 50.
+
+
+<DOCTYPES html>
+<html lang="en">
+<Head>
+<Meta charset="UTF-8">
+<Title>javascript from validation
+</Title>
+<Link rel="stylesheet" href="/Atharv/css/from_style.css">
+<Script>
+
+Function printerror(elemId,hintMsg)
+{
+Document.getElementById(elemId).innerHTML=hintMsg
+}
+
+Function validation ()
+{
+Var name=document.contactfrom.name.value; 
+Var email=document.contactfrom.name.value; 
+Var mobile=document.contactfrom.name.value; 
+Var country=document.contactfrom.name.value; 
+Var gender=document.contactfrom.name.value; 
+Var hobbies=[];
+Var checkboxes=document.getElementByName("hobbies []");
+
+For(var i=0; i<checkboxes.lenght;i++) if(checkboxes [i]. checked)
+{
+Hobbies.push(checkboxes [i]. value);
+}
+}
+Var nameErr=emailErr=mobileErr=countryErr genderErr=true;
+if(name==" ")
+{
+PrintError("nameErr","Enter your name");
+}
+else
+{
+Var regex=/^[a-zA-Z/s]+$/; if(regex.test(name)==false)
+{
+PrintError("nameErr","please enter a valid name");
+}
+
+else
+{
+PrintError("nameErr"," "); nameErr=false;
+}
+}
+
+if(email=="")
+{
+PrintError("emailError","please enter your email address");
+}
+
+else
+{
+Var regex=/^\s-@/s+|.|$+$/; if(regex.test(email)===false)
+{
+PrintError("emailErr","please enter a valid email address");
+}
+
+else
+{
+PrintError("emailErr"," "); EmailErr=false;
+}
+}
+
+if(mobile==" ")
+{PrintError ("mobileErr","please enter your mobile number");
+}
+
+else
+{
+Var regex=/^[1-9]\d{a}$/; if(regex.test(mobile)==false)
+{
+PrintError("mobileErr","please enter a valid 10 digit Mobile number");
+}
+
+else
+{
+PrintError("mobileErr"," "); MobileErr=false;
+}
+}
+
+if(country=="select")
+{
+PrintError("countryErr","please select your country");
+}
+
+else
+{
+PrintError("countryErr"," "); countryErr=false;
+}
+
+if(gender=="");
+{
+PrintError("grnderErr","please select your gender");
+}
+
+else
+{
+PrintError("genderErr",""); GenderErr=false;
+}
+
+if((nameErr||emailErr||mobileErr||countryErr||genderErr)==true)
+{
+Return false
+}
+
+else
+{
+Var datepreview="you've entered the following details:\n"+ "Full name:"+name+"\n+
+"Email address:"+email+"\n+ "Mobile:"+mobile+"\n+ "Country:"+country+"\n+ "Gender:"+gender+"\n+";
+
+if(hobbies.length)
+{
+Datepreview+="hobbies:"+hobbies.join(" ");
+}
+
+Alert(datepreview);
+}
+};
+
+_________________________________________________________
+
+</Script>
+</Head>
+<Body>
+
+<from name="contact from" onsubmit="return validate from()" action="/example/action/conﬁrmation.php" method="post"
+<h2>application from
+</h2>
+
+<div class="new">
+
+<Label>full name</label>
+<input type="text" name="name">
+<Div class="error" I'd="nameErr">
+
+</Div>
+</Div>
+
+<div class="row">
+<label>mobile number</label>
+<input type="text" name="mobile" maxlength="10">
+<Div class="error" Id="mobileErr">
+
+</Div>
+</Div>
+
+<Div class="row">
+<Label>country</label>
+<Select name="country">
+<Option>select</option>
+<Option>Australia</option>
+<Option>india</option>
+<Option>United States</option>
+<Option>United Kingdom</option>
+</Select>
+<Div class="error" I'd="countryErr">
+
+</Div>
+</Div>
+
+<Div class="row">
+<label>gender</label>
+<Label>input type="radio" name="gender" value="female"> female</label>
+
+<Label>input type="movie" name="gender" value="male"> male</ label>
+
+<Label>input type="music" name="gender" value="female"> female</label>
+</Div>
+
+<Div class="error" I'd="genderErr">
+
+</Div>
+</Div>
+
+<Div class=" error" I'd ="genderErr">
+
+</Div>
+</Div>
+
+<Div class="row">
+<Label>hobbies<i>(optional)</i></label>
+<Div class="from-inline"
+<label><input type="checkbox"
+name="hobbies []" value="sports"> sports</label>
+
+<label><input type="checkbox"
+name="hobbies []" value="movie"> movie</label>
+
+<label><input type="checkbox" name="hobbies []" value="music"> music</label>
+
+</Div>
+</Div>
+
+<Div class="row">
+<Input type="submit" value="submit">
+</Div>
+</From>
+</Body>
+</html> 
+
+
+
+$ 2.
+Create an HTML form that contains the Employee Registration details and write a JavaScript to validate DOB, Joining Date, and Salary. 
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Validation using a sample Employee registration form
+</title>
+
+<meta name="keywords" content="example, JavaScript Form
+Validation, Sample registration form" />
+
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+
+<link rel='stylesheet' href='employee.css' type='text/css' />
+<script src="employee.js">
+</script>
+</head>
+<body onload="document.registration.userid.focus();"bgcolor="orange"
+>
+<h1>Employee Registration Form</h1>
+<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="ﬁrst">First Name:
+</label>
+</li>
+<li><input type="text" name="ﬁrst" size="50" /></li>
+<li><label for="last">Last Name:
+</label>
+</li>
+<li><input type="text" name="last" size="50" /></li>
+<li><label for="empid">Employee id:</label></li>
+<li><input type="text"name="empid" size="50"/></li>
+<li><label for="birth">Birth of date:
+</label>
+</li>
+<li><input type="date" id="birth" name="birth"></li>
+<li><label for="address">Address:</label></li>
+<li><input type="text" name="address" size="50" /></li>
+<li><label for="country">Country:</label></li>
+<li><select name="country">
+
+<option selected="" value="Default">(Please select a country)</ option>
+
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select>
+</li>
+
+<li><label for="no">Contact no:
+</label></li>
+<li><input type="number" id="" name="no"></li>
+<li><label for="jdate">Date of joining:</label></li>
+<li><input type="date" id="" name="jdate"></li>
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" size="50" /></li>
+<li><label id="gender">Gender:</label></li>
+<li><input type="radio" name="male" value="Male" /
+><span>Male</span></li>
+<li><input type="radio" name="female" value="Female" /
+><span>Female</span></li>
+<li><label for="salary">salary:</label></li>
+<li><input type="number" id="salary" name="salary"></li>
+<li><input type="submit" name="submit" value="Submit" /></li>
+</ul>
+</form>
+</body>
+</html>
+
+
+employee.js
+
+
+function formValidation()
+{
+var ﬁrst=document.registration.ﬁrst; var last=document.registration.last;
+var empid=document.registration.empid; var birth=document.registration.birth;
+var uadd =document.registration.address; var ucountry =document.registration.country; var no=document.registration.no;
+var jdate=document.registration.jdate; var uemail = document.registration.email;
+var umgen = document.registration.umgen;
+var ufgen = document.registration.ufgen; var salary =document.registration.salary;
+
+if(allLetter(ﬁrst))
+{
+
+if(allLetter(last))
+{
+
+if(alphanumeric(empid))
+{
+
+if(allb(birth))
+{
+
+if(alphanumeric(uadd))
+{
+
+if(countryselect(ucountry))
+{
+
+if(allnumeric(no))
+{
+
+if(allnumeric(jdate))
+{
+if(ValidateEmail(uemail))
+{
+
+if(validgendor(umgen,ufgen))
+{
+
+if(allnumeric(salary))
+{
+}}}}}}}}}}}
+
+return false;
+}
+
+function allLetter(ﬁrst)
+{
+var letters = /^[A-Za-z]+$/; if(ﬁrst.value.match(letters))
+{
+alert('employee name submitted'); return true;
+}
+
+else
+{
+alert('employee name must have alphabet characters only'); ﬁrst.focus();
+return false;
+}
+}
+
+function allLetter(last)
+{
+var letters = /^[A-Za-z]+$/; if(last.value.match(letters))
+{
+alert("employee name submitted"); return true;
+}
+
+else
+{
+alert('employee name must have alphabet characters only'); last.focus();
+return false;
+}
+}
+function alphanumeric(empid)
+{
+var letters = /^[0-9a-zA-Z]+$/; if(empid.value.match(letters))
+{
+alert("employee id submitted"); return true;
+}
+
+else
+{
+alert('employee id must have alphanumeric characters only'); uadd.focus();
+return false;
+}
+}
+
+function allb(birth)
+{
+var birth_len = birth.value.length; if (birth_len == 0)
+{
+alert("birth date should not be empty"); birth.focus();
+return false;
+}
+alert("birth of date submitted"); return true;
+}
+function alphanumeric(uadd)
+{
+var letters = /^[0-9a-zA-Z]+$/;
+if(uadd.value.match(letters))
+{
+alert("address submitted"); return true;
+}
+
+else
+{
+alert('address must have alphanumeric characters only'); uadd.focus();
+return false;
+}
+}
+function countryselect(ucountry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list'); ucountry.focus();
+return false;
+}
+
+else
+{
+alert("country submitted"); return true;
+}
+}
+function allnumeric(no)
+{
+var number = /^[0-9]+$/; if(no.value.match(number))
+{
+alert("Contact Number submitted"); return true;
+}
+
+else
+{
+alert('Contact no must have numeric numbers only'); no.focus();
+return false;
+}
+}
+function allnumeric(jdate)
+{
+var jdate_len = jdate.value.length; if (jdate_len == 0)
+{
+alert("date of joining should not be empty"); birthday.focus();
+return false;
+}
+alert("date of joining submitted"); return true;
+}
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$
+/; if(uemail.value.match(mailformat))
+{
+alert("email address is submitted");
+return true;
+}
+
+
+else
+{
+alert("You have entered an invalid email address!"); uemail.focus();
+return false;
+}
+}
+function validgender(umgen,ufgen)
+{ x=0;
+
+if(umgen.checked)
+{ x++;
+} if(ufgen.checked)
+{ x++;
+}
+
+if(x==0)
+{
+alert('Select Male/Female'); umgen.focus();
+return false;
+}
+
+else
+{
+window.location.reload() return true;
+}
+}
+function allnumeric(salary)
+{
+var sal = /^[0-9]+$/; if(salary.value.match(sal))
+{
+alert("salary submitted"); return true;
+}
+
+else
+{
+alert('salry is not submitted'); salary.focus();
+return false;
+}
+}
+employee.css h1
+{
+margin-left: 70px;
+}
+form li {
+list-style: none; margin-bottom: 5px;
+}
+
+form ul li label{ ﬂoat: left
+clear: left; width: 100px; text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px;
+}
+
+form ul li input, select, span { ﬂoat: left;
+margin-bottom: 10px;
+}
+
+form textarea { ﬂoat: left; width: 350px; height: 150px;
+}
+
+[type="submit"] { clear: left;
+margin: 20px 0 0 230px; font-size:18px
+}
+
+p {
+margin-left: 70px; font-weight: bold;
+
+
+
+
+$ 4. 
+
+ Create a Node.js file that will convert the output "Hello World!" into upper-case letters: 
+
+var http = require('http');
+
+var uc = require('upper-case'); http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/html'}); res.write(uc.upperCase("Hello World!")); res.end();
+
+}).listen(8080);
+
+
+
+$ 5. 
+ Using nodejs create a web page to read two file names from user and append contents of first file into second file
+
+const fs = require('fs');
+console.log("\nFile Contents of ﬁle before append:", fs.readFileSync("example_ﬁle.txt", "utf8"));
+
+fs.appendFile("example_ﬁle.txt", "World", (err) => { if (err) {
+console.log(err);
+}
+
+else
+{
+console.log("\nFile Contents of ﬁle after append:", fs.readFileSync("example_ﬁle.txt", "utf8"));
+}
+});
+const fs = require('fs');
+console.log("\nFile Contents of ﬁle before append:", fs.readFileSync("example_ﬁle.txt", "utf8"));
+
+fs.appendFile("example_ﬁle.txt", " - GeeksForGeeks",
+{
+encoding: "latin1", mode: 0o666, ﬂag: "a" }, (err) => {
+
+if (err)
+{
+console.log(err);
+}
+
+else {
+console.log("\nFile Contents of ﬁle after append:", fs.readFileSync("example_ﬁle.txt", "utf8"))
+}
+});
+
+
+
+
+
+$ 6. 
+
+Create a Node.js file that opens the re$sted file and returns the content to the client. if anything goes wrong, throw a 404 error
+
+var http = require('http'); var url = require('url'); var fs = require('fs');
+
+http.createServer(function (req, res)
+{
+var q = url.parse(req.url, true); var ﬁlename = "." + q.pathname
+fs.readFile(ﬁlename, function(err, data)
+{
+
+if (err)
+{
+res.writeHead(404, {'Content-Type': 'text/html'}); return res.end("404 Not Found");
+}
+
+res.writeHead(200, {'Content-Type': 'text/html'}); res.write(data);
+return res.end();
+});
+}).listen(8080);
+
+
+
+$. 7
+Create a Node.js file that writes an HTML form, with an upload field.
+
+Var http=require('http'); http.createServer(function (req,res)
+{
+res.WriteHead(200,{'content_type':'text/html'}); res.write('<from action="ﬁleupload" method="post"
+enctype="multiparty/from_data">');
+res.write('< input type="ﬁle" name="ﬁleupload"><br>'); res.write('<input type="submit">'); res.write('</from>');
+Return res.end();
+}). listen (8080);
+
+
+
+$. 8 
+Create a Node.js file that demonstrate create database and table in MySQL  
+
+
+var mysql = require('mysql');
+var con = mysql.createConnection(
+{
+host: "localhost", user: "root",
+password: "",
+});
+con.connect(function(err)
+{
+
+if (err) throw err; console.log("Connected successfully ");
+Con.$ry= ("CREATE DATABASE mydb", function (err, result)
+{
+
+if (err) throw err; console.log("Table is created");
+});
+});
+
+
+
+$ 9. 
+Create a node.js file that Select all records from the "customers" table, and display the result object on console  
+
+var mysql = require('mysql');
+var con = mysql.createConnection(
+{
+host: "localhost", user: "yourusername",
+password: "yourpassword", database: "mydb"
+});
+con.connect(function(err)
+{
+
+if (err) throw err;
+con.$ry("SELECT * FROM customers", function (err, result)
+{
+
+if (err) throw err; console.log(result);
+});
+});
+
+
+
+$. 10
+Create a node.js file that Insert Multiple Records in "student" table, and display the result object on console  
+
+var mysql = require('mysql');
+var con = mysql.createConnection({ host: "localhost",
+user: "root", password: "root", database: "studentdb"
+});
+con.connect(function(err)
+{
+
+if (err) throw err; console.log("Connected!");
+var sql = "INSERT INTO student (rollno,name, percentage) VALUES ?";
+
+var values = [ [1,'abc', 77.6], [2,'def', 89.6], [3,'ghi', 91.6] ];
+
+con.$ry(sql, [values], function (err, result)
+{
+
+if (err) throw err;
+console.log("Number of records inserted: " + result.affectedRows);
+});
+
+con.$ry("SELECT * FROM student", function (err, result, ﬁelds) { if (err) throw err;
+console.log(result);
+});
+});
+
+
+
+$. 11
+Create a node.js file that Select all records from the "customers" table, and delete the specified record.  
+
+var mysql = require('mysql');
+var con = mysql.createConnection(
+{
+host: "localhost", user: "yourusername",
+password: "yourpassword", database: "mydb"
+});
+con.connect(function(err)
+{
+
+if (err) throw err;
+var sql = "DELETE FROM customers WHERE address = 'Mountain 21'";
+con.$ry(sql, function (err, result)
+{
+
+if (err) throw err;
+console.log("Number of records deleted: " + result.affectedRows);
+});
+});
+
+
+
+$. 12
+Create a Simple Web Server using node js  
+
+var http = require('http');
+var server = http.createServer(function (req, res)
+{
+});
+server.listen(5000);
+console.log('Node.js web server at port 5000 is running..') 
+
+
+$ 16. 
+write node js script to interact with the filesystem, and serve a web page from a file
+
+var http-require('http'); 
+var fs-require('fs');
+http.createServer (function(req, res) 
+{ 
+fs.readFile('Atharv.html',function(err,data) 
+{ 
+res.writeHead(200, ('Content-Type': 'text/html'}); 
+res.write(data); 
+return res.end();
+ });
+ }).listen(3000); 
+console.log('server is running………’')
+
+
+Myfile.html
+Hello world…!!!
+Welcome to the node.js
+
+
+
+
+$ 17 
+Write node js script to build Your Own Node.js Module. Use require (‘http’) module is a built-in Node module that invokes the functionality of the HTTP library to create a local server. Also use the export statement to make functions in your module available externally. Create a new text file to contain the functions in your module called, “modules.js” and add this function to return today’s date and time
+
+var http = require('http');
+var dt = require('./myfirstmodule');
+http.createServer(function (req, res) 
+{ 
+res.writeHead(200, {'Content-Type': 'Atharv/html'}); 
+res.write("The date and time are currently: " + dt.myDateTime()); 
+res.end(); 
+}).listen(8080);
+
+
+
+
+
+$. 18 
+Create a js file named main.js for event-driven applications. There should be a main loop that listens for events, and then triggers a callback function when one of those events is detected.
+
+var events = require('events'); 
+var eventEmitter = new events.EventEmitter(); 
+var connectHandler = function connected() 
+{ 
+console.log('connection successful.'); 
+eventEmitter.emit('data_received'); 
+} 
+eventEmitter.on('connection', connectHandler); eventEmitter.on('data_received', function() 
+{ 
+console.log('data received successfully.'); 
+}); 
+eventEmitter.emit('connection'); 
+console.log("Program Ended.") 
+
+Create.txt file Welcome to the world of computer science 
+Create main.js file 
+var fs = require("fs"); 
+fs.readFile('input.txt', function (err, data) { 
+if (err) 
+{
+ console.log(err.stack); return;
+ } 
+console.log(data.toString()); 
+}); 
+console.log("Program Ended");
+
+
+
+
+$. 19 
+Write a node js application that transfers a file as an attachment on the web and enables browsers to prompt the user to download file using express js.  
+
+
+Express.js 
+
+var express = require('express'); 
+var app = express(); 
+var PORT = 3000; 
+app.get('/', function(req, res) 
+{ 
+res.download('Hello.txt'); 
+}); 
+app.listen(PORT, function(err){
+if (err) console.log(err); 
+console.log("Server listening on PORT", PORT); 
+}); 
+
+Express.txt 
+
+var express = require('express'); 
+var app = express(); 
+var PORT = 3000; 
+
+app.get('/', function(req, res)
+{ 
+res.download('Hello.txt');
+}); 
+
+app.listen(PORT, function(err)
+{ 
+if (err) console.log(err); 
+console.log("Server listening on PORT", PORT);
+});
+
+
+
+
+
+
