@@ -1,0 +1,49 @@
+<!-- create an Html form that contains the student registations and write and javascript to validate student first name and last name as is should not contains other than alphabets and age should be between 18 to 50 -->
+
+
+<html>
+    <head>
+        <title>Student Form</title>
+
+    </head>
+    <body>
+        <center>
+            <h2>
+                Student Registration Form
+            </h2>
+            <p>First Name : <input type="text" name="" id="fn"></p>
+            <p>Last Name : <input type="text" name="" id="ln"></p>
+            <p>Age : <input type="text"  id="numb"></p>
+            <p id="demo"></p>
+            <p>Address : <input type="text" id="add"></p>
+            <button type="button" onclick="validate()">Click</button>
+        </center>
+
+        <script>
+            function validate()
+            {
+                
+                var x;
+                //Get the value of the input feilds
+                n1 = document.getElementById("fn").value;
+                n2 = document.getElementById("ln").value;
+                x = document.getElementById("numb").value;
+
+                var letters = /^[A-Za-z]+$/;
+             if((!n1.match(letters))||(!n2.match(letters)))
+                {
+                    alert("Invalid UserName");
+                }
+                else if( isNaN(x)||x<18||x>50)
+                {
+                    document.getElementById("demo").innerHTML = 'Incorrect Age';
+                }else
+                {
+                    alert("Form Submitted")
+                }
+              
+            }
+     
+        </script>
+    </body>
+</html>

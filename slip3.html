@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <center>
+            <h2>Email Validation</h2>
+   
+        User Name : <input type="text" id="uname"> <br><br>
+        Password : <input type="password" id="pass"> <br><br>
+       Email : <input type="text" id="uemail"> <br><br>
+       <button type="button"  onclick="ValidateEmail(uemail);">Click Here</button>
+    </center>
+
+    <script>
+        function ValidateEmail(uemail)
+        {
+            if(!(uname.value == '') && !(pass.value=='') && !(uemail.value==''))
+            {
+                var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]? \w+)*(\.\w{2,3})+ $/;
+                if(uemail.value.match(mailFormat))
+                {
+                    alert("Login Success");
+                    return true;
+                }
+                else {
+                    alert("You have entered an Invalid Emails!");
+                    uemail.focus();
+                    return false;
+                }
+            }
+                else {
+                    alert("Field should not be empty")
+                    return false;
+                }
+            }
+       
+    </script>
+    </body>
+</html>
