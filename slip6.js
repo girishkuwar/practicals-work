@@ -1,21 +1,21 @@
 var http = require('http');
 var fs = require('fs');
-
-var server = http.createServer(function (req,res){
-    fs.open('ex.txt','r+', function(err, fd) {
+http.createServer(function (req,res){
+    fs.open('ex.txt',function(err, fd) {
         if(err){
-            console.log(err);
+            console.error(err);
             return res.end('404 not found');
         }
         else{
             console.log('file opened succesfully');
-            fs.readFile('ex2.txt', function(err,data){
+            fs.readFile('ex.txt', function(err,data){
+           
                 if(!err){
                     console.log('success');
                     res.end(data);
+                    fs.close(fd);
                 }
             });
         }
     })
-})
-server.listen(8080);
+}).listen(8080);
