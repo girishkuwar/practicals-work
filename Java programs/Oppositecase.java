@@ -2,7 +2,7 @@
 
 // Java program to Convert characters  
 // of a string to opposite case 
-class Test
+class Oppositecase
 { 
        
      // Method to convert characters  
