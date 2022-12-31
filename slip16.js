@@ -12,6 +12,8 @@ console.log('data received successfully.');
 eventEmitter.emit('connection'); 
 console.log("Program Ended.") 
 
+// Create input.txt file with some text
+
 var fs = require("fs"); 
 fs.readFile('input.txt', function (err, data) { 
 if (err) 
