@@ -9,6 +9,8 @@ http.createServer(function (req,res){
         else{
             console.log('file opened succesfully');
             fs.readFile('ex.txt', function(err,data){
+
+                // create ex.txt file with some txt
            
                 if(!err){
                     console.log('success');

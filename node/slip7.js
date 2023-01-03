@@ -6,6 +6,6 @@ http.createServer(function (req,res) {
     res.write('<input type="file" name="fileuplaod"><br>');
     res.write('<input type="submit">');
     res.write('</form>');
-    res.end;
+    return res.end;
 }).listen(8050);
 console.log("server running on 8050 port");

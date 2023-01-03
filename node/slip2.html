@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function formvalidation()
+        {
+            var first = document.registration.first;
+            var last = document.registration.last;
+            var empid = document.registration.empid;
+            var birth = document.registration.birth;
+            var jdate = document.registration.jdate;
+            var salary = document.registration.salary;
+
+        var letters = /^[A-Za-z]+$/;
+        if (first.value.match(letters))
+            {
+                if (!last.value.match(letters))
+                {
+                    alert("emp last name have alphabate only");
+                    last.focus();
+                    return false;
+                }
+                else
+                {
+                    var letters = /^[0-9A-Za-z]+$/;
+                    if (!empid.value.match(letters))
+                    {
+                        alert('emp id must have alpahanumeric character only');
+                        empid.focus();
+                        return false;
+                    }
+                     else
+                            {
+                                var birth_len = birth.value.length;
+                                var doj = jdate.value.length;
+                                if ((birth_len==0||doj==0))
+                                {
+                                    alert('birth date and joining date should not be empty');
+                                    birth.focus();
+                                    return false;
+                                }
+                                else
+                                    {
+                                        var sal = /^[0-9]+$/;
+                                        if (!salary.value.match(sal)) {
+                                            alert ('salary not submited');
+                                            salary.focus();
+                                            return false;
+                                        }
+                                        else {
+                                            alert('form submited');
+                                        }
+                                    }
+                            }
+                }
+
+            }
+            else
+            {
+                alert('Employe first name must have only alphabaets');
+                first.focus();
+                return false;
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <center>
+    <h1>Employe Registration Form</h1>
+    <form name="registration" onsubmit="return formvalidation();" action="">
+        First Name : <input type="text" name="first" size="20" ><br>
+        Last Name : <input type="text" name="last" size="20" ><br>
+        Employe ID : <input type="text" name="empid" size="10" ><br>
+        Birth Date : <input type="date" name="birth" id="birth" ><br>
+        Date Of Joining : <input type="date" id="" name="jdate" ><br>
+        Salary : <input type="text" id="salary" name="salary" ><br>
+        <input type="submit" name="submit" value="Submit"> <br>
+    </form>
+    </center>
+</body>
+</html>
