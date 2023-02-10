@@ -4,7 +4,7 @@
 Trying to do so much in 
 
 
-![Logo](https://cdn.dribbble.com/userupload/2445208/file/original-36e8f98866a8475c749554b2e3cecf95.png?resize=400x0)
+![Logo]([https://cdn.dribbble.com/userupload/2445208/file/original-36e8f98866a8475c749554b2e3cecf95.png?resize=400x0](https://cdn3d.iconscout.com/3d/premium/thumb/programming-langugae-4623877-3851421.png))
 
 
 ## Roadmap
